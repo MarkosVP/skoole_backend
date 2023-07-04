@@ -1,0 +1,28 @@
+version: '1.0'
+services:
+  # Gateway API
+  skoole_gateway:
+    container_name: skoole_gateway
+    build:
+      context: ./gateway_api
+      dockerfile: ./devops/docker/Dockerfile
+    hostname: skoole_gateway
+    ports:
+      - 80:8080
+    volumes:
+      - ./gateway_api/app:/usr/src/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - skoole
+
+  # Registry API
+
+  # Search API
+
+  # Forum API
+
+# Internal Networks
+networks:
+  skoole:
+    name: skoole

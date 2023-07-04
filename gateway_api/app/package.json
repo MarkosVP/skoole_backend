@@ -1,0 +1,13 @@
+{
+    "name": "skoole_gateway",
+    "version": "1.0.0",
+    "description": "Gateway API for Skoole",
+    "author": "Marcos Pinheiro <marcosvsp@hotmail.com>",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
