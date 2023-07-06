@@ -4,8 +4,8 @@ FROM node:20
 # Create our app base dir
 WORKDIR /usr/src/app
 
-# Install all the project dependencies
-RUN npm install
+# Install express gateway globally
+RUN npm install -g express-gateway
 
 # Expose port 8080 to the host system
 EXPOSE 8080

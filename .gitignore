@@ -1,1 +1,5 @@
-gateway_api/app/node_modules
+# Ignore node_module folders from our services
+skoole/gateway/node_modules
+skoole/forum_service/node_modules
+skoole/registry_service/node_modules
+skoole/search_service/node_modules
