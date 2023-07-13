@@ -9,6 +9,7 @@ services:
     hostname: skoole_gateway
     ports:
       - 80:8080
+      - 3000:3000
     volumes:
       - ./skoole/gateway:/usr/src/app
     extra_hosts:
@@ -25,30 +26,6 @@ services:
     hostname: skoole_registry
     volumes:
       - ./skoole/registry_service:/usr/src/app
-    networks:
-      - skoole
-
-  # Search API
-  skoole_search:
-    container_name: skoole_search
-    build:
-      context: ./
-      dockerfile: ./devops/docker/Dockerfile
-    hostname: skoole_search
-    volumes:
-      - ./skoole/search_service:/usr/src/app
-    networks:
-      - skoole
-
-  # Forum API
-  skoole_forum:
-    container_name: skoole_forum
-    build:
-      context: ./
-      dockerfile: ./devops/docker/Dockerfile
-    hostname: skoole_forum
-    volumes:
-      - ./skoole/forum_service:/usr/src/app
     networks:
       - skoole
 

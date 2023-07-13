@@ -1,0 +1,5 @@
+{
+    "environment": "development",
+    "service_name": "Registry API",
+    "service_port": 3001
+}
